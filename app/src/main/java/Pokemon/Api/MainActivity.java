@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         sharedPreferences = getSharedPreferences("application_esiea", Context.MODE_PRIVATE);
-
-
         gson = new GsonBuilder()
                 .setLenient()
                 .create();
@@ -51,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Pokemon> getDateFromCache() {
         String jsonPokemon = sharedPreferences.getString(Constants.KEY_POKEMON_LIST, null);
-
         if(jsonPokemon == null){
             return null;
         }else {
@@ -83,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<RestPokemonResponse>() {
 
             @Override
-
             public void onResponse(Call<RestPokemonResponse> call, Response<RestPokemonResponse> response) {
                 if (response.isSuccessful() && response.body() != null){
                     List<Pokemon> pokemonList = response.body().getResults();
@@ -95,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-
             public void onFailure(Call<RestPokemonResponse> call, Throwable t) {
                 showError();
             }
