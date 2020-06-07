@@ -1,8 +1,8 @@
 # Projet3ARudyLombard
-Application affichage de pokemon
+Application affichage d'une liste de pokemon
 
 Présentation :
-Affichage d'une liste renvoyant les informations d'une Api rest Pokemon
+Affichage d'une liste renvoyant les informations d'une Api rest Pokemon https://pokeapi.co
 
 Consignes respectées :
 
@@ -11,6 +11,8 @@ Consignes respectées :
 -> Appel serveur
 
 -> Stockage de données
+
+-> Gitflow
 
 Fonctionnalités : 
 
